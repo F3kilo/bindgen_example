@@ -6,6 +6,7 @@ use std::{
 mod time;
 
 fn main() {
+    println!("{}", concat!(env!("OUT_DIR"), "/bindings.rs"));
     println!("Thread sleeps:");
     for _ in 0..5 {
         thread::sleep(Duration::from_secs(1));
