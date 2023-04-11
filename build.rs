@@ -3,6 +3,7 @@ use std::{env, path::PathBuf};
 fn main() {
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
+        .allowlist_function("clock")
         .generate()
         .unwrap();
 
